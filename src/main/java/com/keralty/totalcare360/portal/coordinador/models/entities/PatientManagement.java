@@ -12,7 +12,7 @@ public class PatientManagement {
     @GeneratedValue
     private Long id;
     private Long patient_id;
-    private String hemoglobina;
+    private int hemoglobina;
     private String priority;
     @Transient
     private String name;
@@ -33,7 +33,7 @@ public class PatientManagement {
 
     }
 
-    public PatientManagement(Long id, Long patient_id, String hemoglobina, String priority, String rute, String testDiagnostic, int pendingActivity) {
+    public PatientManagement(Long id, Long patient_id, int hemoglobina, String priority, String rute, String testDiagnostic, int pendingActivity) {
         this.id = id;
         this.patient_id = patient_id;
         this.hemoglobina = hemoglobina;
@@ -59,11 +59,11 @@ public class PatientManagement {
         this.patient_id = patient_id;
     }
 
-    public String getHemoglobina() {
+    public int getHemoglobina() {
         return hemoglobina;
     }
 
-    public void setHemoglobina(String hemoglobina) {
+    public void setHemoglobina(int hemoglobina) {
         this.hemoglobina = hemoglobina;
     }
 

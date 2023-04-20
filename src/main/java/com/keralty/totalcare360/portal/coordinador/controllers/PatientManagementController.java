@@ -18,10 +18,13 @@ public class PatientManagementController {
 
     @GET
     public List<PatientManagement> allPatientsManagement() {
-
-        System.out.println("ingresa a allPatientsManagement");
-
         return patientManagement.findAll();
+    }
+
+    @GET
+    @Path("/OrderByHemoglobin")
+    public List<PatientManagement> allPatientsManagementOrderByHemoglobina() {
+        return patientManagement.findAllOrderByHemoglobina();
     }
 
     @GET

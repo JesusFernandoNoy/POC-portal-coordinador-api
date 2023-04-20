@@ -8,5 +8,7 @@ import java.util.Optional;
 public interface IPatientManagementService {
 
     List<PatientManagement> findAll();
+
+    List<PatientManagement> findAllOrderByHemoglobina();
     Optional<PatientManagement> findByPatientId(Long patientId);
 }

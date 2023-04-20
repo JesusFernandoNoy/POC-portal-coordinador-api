@@ -38,8 +38,21 @@ public class PatientManagementServiceImpl implements IPatientManagementService{
             if(patientObjet.isPresent()){
                 Patient patient = patientObjet.get();
                 pm = getPatientInformation(patient,pm);
-            }else{
-                throw new WebApplicationException("Patient with ID " + patientId + " does not exist.", 404);
+            }
+        }
+        return listPatientManagement;
+    }
+
+    @Override
+    public List<PatientManagement> findAllOrderByHemoglobina() {
+        List<PatientManagement> listPatientManagement = (List<PatientManagement>) patientManagementRepository.findAllOrderByHemoglobina();
+
+        for (PatientManagement pm: listPatientManagement){
+            Long patientId = pm.getPatient_id();
+            Optional<Patient> patientObjet = patientService.findByPatientId(patientId);
+            if(patientObjet.isPresent()){
+                Patient patient = patientObjet.get();
+                pm = getPatientInformation(patient,pm);
             }
         }
         return listPatientManagement;
