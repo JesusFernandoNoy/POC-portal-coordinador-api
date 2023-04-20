@@ -5,10 +5,7 @@ import com.keralty.totalcare360.portal.coordinador.models.entities.Patient;
 import com.keralty.totalcare360.portal.coordinador.services.IActivityService;
 
 import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -25,9 +22,14 @@ public class ActivityController {
     }
 
     @GET
-    @Path("/ActivitiesByCategory/{programName}/{activityCategory:\\d+}")
-    public List<Activity> getActivitiesByCategory(@PathParam("programName") String programName, @PathParam("activityCategory") int activityCategory) {
-        List<Activity> activityList = activityService.findByActivityCategory(programName,activityCategory);
+    @Path("/ActivitiesByPatient/{patientID}")
+    public List<Activity> getActivitiesByCategory(@PathParam("patientID") Long patientID) {
+        List<Activity> activityList = activityService.findByPatientId(patientID);
+
+        if (activityList.size() == 0){
+            throw new WebApplicationException("Patient with ID " + patientID + " does not exist.", 404);
+        }
+
         return activityList;
     }
 }

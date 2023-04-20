@@ -24,6 +24,12 @@ public class PatientServiceImpl implements IPatientService{
         Age edad = AgeCalculator.calculateAge(patient.getBirthDay());
         patient.setAge(edad.toString());
 
+        if (edad.getYears() >= 18){
+            patient.setOlder(true);
+        }else{
+            patient.setOlder(false);
+        }
+
         patient.setFullNameLastName(patient.getName() + " " + patient.getLastName());
 
         if (patient.getGender().equals("Male")){
@@ -50,6 +56,7 @@ public class PatientServiceImpl implements IPatientService{
         String dateInSpanish=localDate.format(DateTimeFormatter.ofPattern("dd MMMM, yyyy",spanishLocale));
 
         patient.setBirthDayFormatter(dateInSpanish);
+
 
         return patient;
     }

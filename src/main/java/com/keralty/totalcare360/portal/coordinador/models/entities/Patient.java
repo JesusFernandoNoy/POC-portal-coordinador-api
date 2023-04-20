@@ -39,6 +39,9 @@ public class Patient {
     @Transient
     private String birthDayFormatter;
 
+    @Transient
+    private Boolean isOlder;
+
     public Patient(){
     }
 
@@ -168,7 +171,21 @@ public class Patient {
         this.fullNameLastName = fullNameLastName;
     }
 
+    public String getBirthDayFormatter() {
+        return birthDayFormatter;
+    }
 
+    public void setBirthDayFormatter(String birthDayFormatter) {
+        this.birthDayFormatter = birthDayFormatter;
+    }
+
+    public Boolean getOlder() {
+        return isOlder;
+    }
+
+    public void setOlder(Boolean older) {
+        isOlder = older;
+    }
 
     @Override
     public boolean equals(Object o) {

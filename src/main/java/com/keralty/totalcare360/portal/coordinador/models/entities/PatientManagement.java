@@ -26,6 +26,9 @@ public class PatientManagement {
     private String testDiagnostic;
     private int pendingActivity;
 
+    @Transient
+    private boolean isOlder;
+
     public PatientManagement(){
 
     }
@@ -126,6 +129,14 @@ public class PatientManagement {
 
     public void setPendingActivity(int pendingActivity) {
         this.pendingActivity = pendingActivity;
+    }
+
+    public boolean isOlder() {
+        return isOlder;
+    }
+
+    public void setOlder(boolean older) {
+        isOlder = older;
     }
 
     @Override

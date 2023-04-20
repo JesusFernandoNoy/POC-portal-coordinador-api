@@ -13,6 +13,6 @@ public interface IActivityService {
 
     Optional<Activity> findById(Long activityId);
 
-    List<Activity> findByActivityCategory(String programName, int activityCategory);
+    List<Activity> findByPatientId(Long patientID);
 
 }
