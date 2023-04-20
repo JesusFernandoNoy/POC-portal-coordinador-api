@@ -168,13 +168,7 @@ public class Patient {
         this.fullNameLastName = fullNameLastName;
     }
 
-    public String getBirthDayFormatter() {
-        return birthDayFormatter;
-    }
 
-    public void setBirthDayFormatter(String birthDayFormatter) {
-        this.birthDayFormatter = birthDayFormatter;
-    }
 
     @Override
     public boolean equals(Object o) {
