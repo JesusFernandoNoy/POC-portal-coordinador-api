@@ -59,3 +59,44 @@ If you want to learn more about building native executables, please consult http
 Easily start your Reactive RESTful Web Services
 
 [Related guide section...](https://quarkus.io/guides/getting-started-reactive#reactive-jax-rs-resources)
+
+### Steps to execute in docker
+- first download postgress images
+```shell command
+docker pull postgres
+```
+
+
+- Create network
+```shell command 
+docker network create quarkus-mcsv
+```
+
+- then run postgres image 
+```shell command 
+docker run --name portal-coordinador --network quarkus-mcsv -p 5455:5432 -e POSTGRES_PASSWORD=pgAdmin -e POSTGRES_DB=portalCoordinador -d postgres
+```
+
+-- para revisar la conexion con la base de datos
+```shell command 
+docker exec -it 8c73f5b8f9f5 psql -U postgres -W postgres
+```
+
+-- construir la imagen docker de este proyecto 
+```shell command 
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/portal-coordinador-api-jvm .
+```
+
+-- validar que se encuentre la imagen cread
+```shell command 
+docker images
+```
+
+-- por ultimo docker run command 
+```shell command 
+docker run -i -p 8085:8085 --rm --name portal-coordinador-api --network quarkus-mcsv quarkus/portal-coordinador-api-jvm
+```
+
+
+
+
