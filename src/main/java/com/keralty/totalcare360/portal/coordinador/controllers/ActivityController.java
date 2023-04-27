@@ -1,7 +1,6 @@
 package com.keralty.totalcare360.portal.coordinador.controllers;
 
 import com.keralty.totalcare360.portal.coordinador.models.entities.Activity;
-import com.keralty.totalcare360.portal.coordinador.models.entities.Patient;
 import com.keralty.totalcare360.portal.coordinador.services.IActivityService;
 
 import javax.inject.Inject;

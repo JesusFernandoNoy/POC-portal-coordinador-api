@@ -11,8 +11,9 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 @ApplicationPath("/")
 @OpenAPIDefinition(
         tags = {
-                @Tag(name="widget", description="Widget operations."),
-                @Tag(name="gasket", description="Operations related to gaskets")
+                @Tag(name="Activity", description="Activity APIs"),
+                @Tag(name="Patient", description="Patient APIs"),
+                @Tag(name="PatientManagement", description="Patient Management APIs")
         },
         info = @Info(
                 title="Portal Coordinador API",
