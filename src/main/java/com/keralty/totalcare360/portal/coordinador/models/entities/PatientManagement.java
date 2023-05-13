@@ -1,15 +1,13 @@
 package com.keralty.totalcare360.portal.coordinador.models.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "patients_management")
 public class PatientManagement {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
     private Long patient_id;
     private int hemoglobina;

@@ -1,16 +1,15 @@
 package com.keralty.totalcare360.portal.coordinador.models.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
+@Table(name = "activities")
 public class Activity {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
     private String programName;

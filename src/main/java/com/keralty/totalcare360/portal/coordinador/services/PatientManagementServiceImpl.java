@@ -1,12 +1,13 @@
 package com.keralty.totalcare360.portal.coordinador.services;
 
-import com.keralty.totalcare360.portal.coordinador.models.entities.Patient;
+import com.keralty.totalcare360.portal.coordinador.models.entities.PatientTotalCare;
 import com.keralty.totalcare360.portal.coordinador.models.entities.PatientManagement;
 import com.keralty.totalcare360.portal.coordinador.repository.PatientManagementRepository;
 
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import javax.transaction.Transactional;
 import javax.ws.rs.WebApplicationException;
 import java.util.List;
 import java.util.Optional;
@@ -20,11 +21,12 @@ public class PatientManagementServiceImpl implements IPatientManagementService{
     @Inject
     PatientManagementRepository patientManagementRepository;
 
-    public PatientManagement getPatientInformation(Patient patient, PatientManagement pm){
-        pm.setName(patient.getFullNameLastName());
-        pm.setIdType(patient.getDocumentTypeName());
-        pm.setNumId(patient.getDocumentNumber().toString());
-        pm.setAge(patient.getAge());
+    public PatientManagement getPatientInformation(PatientTotalCare patientTotalCare, PatientManagement pm){
+        pm.setName(patientTotalCare.getFullNameLastName());
+        pm.setIdType(patientTotalCare.getDocumentTypeName());
+        pm.setNumId(patientTotalCare.getDocumentNumber().toString());
+        pm.setAge(patientTotalCare.getAge());
+        pm.setOlder(patientTotalCare.getOlder());
         return pm;
     }
 
@@ -34,10 +36,10 @@ public class PatientManagementServiceImpl implements IPatientManagementService{
 
         for (PatientManagement pm: listPatientManagement){
             Long patientId = pm.getPatient_id();
-            Optional<Patient> patientObjet = patientService.findByPatientId(patientId);
+            Optional<PatientTotalCare> patientObjet = patientService.findByPatientId(patientId);
             if(patientObjet.isPresent()){
-                Patient patient = patientObjet.get();
-                pm = getPatientInformation(patient,pm);
+                PatientTotalCare patientTotalCare = patientObjet.get();
+                pm = getPatientInformation(patientTotalCare,pm);
             }
         }
         return listPatientManagement;
@@ -49,10 +51,10 @@ public class PatientManagementServiceImpl implements IPatientManagementService{
 
         for (PatientManagement pm: listPatientManagement){
             Long patientId = pm.getPatient_id();
-            Optional<Patient> patientObjet = patientService.findByPatientId(patientId);
+            Optional<PatientTotalCare> patientObjet = patientService.findByPatientId(patientId);
             if(patientObjet.isPresent()){
-                Patient patient = patientObjet.get();
-                pm = getPatientInformation(patient,pm);
+                PatientTotalCare patientTotalCare = patientObjet.get();
+                pm = getPatientInformation(patientTotalCare,pm);
             }
         }
         return listPatientManagement;
@@ -66,15 +68,22 @@ public class PatientManagementServiceImpl implements IPatientManagementService{
         if(o.isPresent()) {
             PatientManagement pm = o.get();
             Long pId= pm.getPatient_id();
-            Optional<Patient> patientObj = patientService.findByPatientId(pId);
+            Optional<PatientTotalCare> patientObj = patientService.findByPatientId(pId);
             if(patientObj.isPresent()){
-                Patient patient = patientObj.get();
-                pm = getPatientInformation(patient,pm);
+                PatientTotalCare patientTotalCare = patientObj.get();
+                pm = getPatientInformation(patientTotalCare,pm);
             }else{
                 throw new WebApplicationException("Patient with ID " + patientId + " does not exist.", 404);
             }
             return  Optional.of(pm);
         }
         return Optional.empty();
+    }
+
+    @Transactional
+    @Override
+    public PatientManagement savePatientManagement(PatientManagement patientManagement) {
+        patientManagementRepository.persistAndFlush(patientManagement);
+        return patientManagement;
     }
 }

@@ -1,0 +1,572 @@
+{
+    "entry": [
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "activity": [
+                    {
+                        "detail": {
+                            "kind": "Appointment",
+                            "status": "not-started"
+                        },
+                        "reference": {
+                            "reference": "Appointment/dc90644e-25ca-4e86-a873-c19d9871cffc"
+                        }
+                    },
+                    {
+                        "detail": {
+                            "kind": "Appointment",
+                            "status": "not-started"
+                        },
+                        "reference": {
+                            "reference": "Appointment/ea332049-9515-4fe9-8e20-eb651fd6f563"
+                        }
+                    },
+                    {
+                        "detail": {
+                            "kind": "Appointment",
+                            "status": "not-started"
+                        },
+                        "reference": {
+                            "reference": "Appointment/8883abd1-d6fd-45d5-8312-4ac45917ebde"
+                        }
+                    },
+                    {
+                        "detail": {
+                            "kind": "Appointment",
+                            "status": "not-started"
+                        },
+                        "reference": {
+                            "reference": "Appointment/5f545e5f-ae2b-432e-911b-367010d18811"
+                        }
+                    },
+                    {
+                        "detail": {
+                            "kind": "Appointment",
+                            "status": "not-started"
+                        },
+                        "reference": {
+                            "reference": "Appointment/cdcaf424-d31b-4a9d-a49f-c17a2050796b"
+                        }
+                    }
+                ],
+                "basedOn": [
+                    {
+                        "reference": "PlanDefinition/idPL"
+                    }
+                ],
+                "description": "UPI Diabetes",
+                "id": "591b331d-5910-4448-9d84-8980af83303b",
+                "intent": "plan",
+                "note": [
+                    {
+                        "text": "risk_factor='Riesgo IV a';case_rank=245120298"
+                    }
+                ],
+                "resourceType": "CarePlan",
+                "status": "draft",
+                "subject": {
+                    "display": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                    "reference": "Patient/dfbab-a2917a"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "comment": "next_appt_range=Inmediato;last_appt_date=No aplica;frequency=\u00danica vez",
+                "id": "dc90644e-25ca-4e86-a873-c19d9871cffc",
+                "participant": [
+                    {
+                        "actor": {
+                            "display": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                            "reference": "Patient/dfbab-a2917a"
+                        },
+                        "required": "required",
+                        "status": "accepted"
+                    }
+                ],
+                "resourceType": "Appointment",
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "code": "855",
+                                "display": "Pediatr\u00eda"
+                            }
+                        ],
+                        "id": "5eabb87d-7d9d-4107-a6d9-82413f0c797f"
+                    }
+                ],
+                "status": "pending",
+                "supportingInformation": [
+                    {
+                        "reference": "591b331d-5910-4448-9d84-8980af83303b",
+                        "type": "CarePlan"
+                    }
+                ]
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "comment": "next_appt_range=Inmediato;last_appt_date=No aplica;frequency=\u00danica vez",
+                "id": "ea332049-9515-4fe9-8e20-eb651fd6f563",
+                "participant": [
+                    {
+                        "actor": {
+                            "display": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                            "reference": "Patient/dfbab-a2917a"
+                        },
+                        "required": "required",
+                        "status": "accepted"
+                    }
+                ],
+                "resourceType": "Appointment",
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "code": "285",
+                                "display": "Psicolog\u00eda"
+                            }
+                        ],
+                        "id": "92f44840-ecfd-4833-adf1-8c9981be52b4"
+                    }
+                ],
+                "status": "pending",
+                "supportingInformation": [
+                    {
+                        "reference": "591b331d-5910-4448-9d84-8980af83303b",
+                        "type": "CarePlan"
+                    }
+                ]
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "comment": "next_appt_range=Inmediato;last_appt_date=No aplica;frequency=\u00danica vez",
+                "id": "8883abd1-d6fd-45d5-8312-4ac45917ebde",
+                "participant": [
+                    {
+                        "actor": {
+                            "display": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                            "reference": "Patient/dfbab-a2917a"
+                        },
+                        "required": "required",
+                        "status": "accepted"
+                    }
+                ],
+                "resourceType": "Appointment",
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "code": "278",
+                                "display": "Nutrici\u00f3n"
+                            }
+                        ],
+                        "id": "ce551e47-1a6d-417f-871c-23dc32499e11"
+                    }
+                ],
+                "status": "pending",
+                "supportingInformation": [
+                    {
+                        "reference": "591b331d-5910-4448-9d84-8980af83303b",
+                        "type": "CarePlan"
+                    }
+                ]
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "comment": "next_appt_range=Inmediato;last_appt_date=No aplica;frequency=\u00danica vez",
+                "id": "5f545e5f-ae2b-432e-911b-367010d18811",
+                "participant": [
+                    {
+                        "actor": {
+                            "display": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                            "reference": "Patient/dfbab-a2917a"
+                        },
+                        "required": "required",
+                        "status": "accepted"
+                    }
+                ],
+                "resourceType": "Appointment",
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "code": "279",
+                                "display": "Trabajo Social"
+                            }
+                        ],
+                        "id": "f11e2fc0-f963-4d0d-898c-af1549de2f39"
+                    }
+                ],
+                "status": "pending",
+                "supportingInformation": [
+                    {
+                        "reference": "591b331d-5910-4448-9d84-8980af83303b",
+                        "type": "CarePlan"
+                    }
+                ]
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "comment": "next_appt_range=Inmediato;last_appt_date=No aplica;frequency=\u00danica vez",
+                "id": "cdcaf424-d31b-4a9d-a49f-c17a2050796b",
+                "participant": [
+                    {
+                        "actor": {
+                            "display": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                            "reference": "Patient/dfbab-a2917a"
+                        },
+                        "required": "required",
+                        "status": "accepted"
+                    }
+                ],
+                "resourceType": "Appointment",
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                "code": "276",
+                                "display": "Enfermer\u00eda"
+                            }
+                        ],
+                        "id": "734f8f8c-4cd7-40d8-ae11-856530f99ba1"
+                    }
+                ],
+                "status": "pending",
+                "supportingInformation": [
+                    {
+                        "reference": "591b331d-5910-4448-9d84-8980af83303b",
+                        "type": "CarePlan"
+                    }
+                ]
+            }
+        },
+        {
+            "request": {
+                "method": "POST"
+            },
+            "resource": {
+                "address": [
+                    {
+                        "city": "Bogot\u00e1",
+                        "country": "CO",
+                        "line": [
+                            "country=Colombia",
+                            "address=Nueva direcci\u00f3n en la ciudad"
+                        ],
+                        "postalCode": "111111",
+                        "state": "Bogot\u00e1 D.C"
+                    }
+                ],
+                "birthDate": "2020-12-26",
+                "communication": [
+                    {
+                        "language": {
+                            "coding": [
+                                {
+                                    "code": "es",
+                                    "display": "Spanish",
+                                    "system": "urn:ietf:bcp:47"
+                                }
+                            ],
+                            "text": "Spanish"
+                        }
+                    }
+                ],
+                "extension": [
+                    {
+                        "url": "GENERO",
+                        "valueString": "Femenino"
+                    },
+                    {
+                        "url": "ESTADO_CIVIL",
+                        "valueString": "Soltero (a)"
+                    }
+                ],
+                "gender": "female",
+                "id": "dfbab-a2917a",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "RC",
+                                    "display": "Registro Civil",
+                                    "system": "https://www.minsalud.gov.co/ihc/fhir/CodeSystem/IdspersonaColombia"
+                                }
+                            ],
+                            "text": "Registro Civil"
+                        },
+                        "value": "1082738392"
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "code": "U",
+                            "display": "unmarried",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
+                        }
+                    ],
+                    "text": "Soltero (a)"
+                },
+                "meta": {
+                    "lastUpdated": "2023-03-06T20:51:26.520Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+                    ],
+                    "versionId": "MTY3ODEzNTg4NjUyNDA0MjAwMA"
+                },
+                "multipleBirthBoolean": false,
+                "name": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-fathers-family",
+                                "valueString": "Guti\u00e9rrez"
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/humanname-mothers-family",
+                                "valueString": "Aldoba"
+                            }
+                        ],
+                        "family": "Guti\u00e9rrez Aldoba",
+                        "given": [
+                            "Daniela",
+                            "Mar\u00eda"
+                        ],
+                        "text": "Daniela Mar\u00eda Guti\u00e9rrez Aldoba",
+                        "use": "official"
+                    }
+                ],
+                "resourceType": "Patient",
+                "telecom": [
+                    {
+                        "rank": 1,
+                        "system": "phone",
+                        "use": "mobile",
+                        "value": "3124921624"
+                    },
+                    {
+                        "rank": 2,
+                        "system": "phone",
+                        "use": "work",
+                        "value": "6013958204"
+                    },
+                    {
+                        "rank": 3,
+                        "system": "phone",
+                        "use": "mobile",
+                        "value": "3018492748"
+                    },
+                    {
+                        "rank": 1,
+                        "system": "email",
+                        "value": "jamartinez@colsanitas.com"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "https://healthcare.googleapis.com/v1/projects/repo-mcr-dev-staging-343/locations/us-east1/datasets/ds-col-data-repo-dev-final/fhirStores/fhir-col-data-repo-dev-dummy-qa/fhir/Observation/dfbab-a2917a-5",
+            "resource": {
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "laboratory",
+                                "display": "laboratory",
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "code": "903426",
+                            "display": "Hemoglobina Glicosilada",
+                            "system": "https://fcv.org"
+                        }
+                    ],
+                    "text": "Hemoglobina Glicosilada"
+                },
+                "effectiveDateTime": "2022-10-02T08:13:53Z",
+                "id": "dfbab-a2917a-5",
+                "issued": "2022-10-02T08:13:53.040Z",
+                "meta": {
+                    "lastUpdated": "2023-03-06T20:51:26.820Z",
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"
+                    ],
+                    "versionId": "MTY3ODEzNTg4NjgxODgwNzAwMA"
+                },
+                "resourceType": "Observation",
+                "status": "final",
+                "subject": {
+                    "reference": "Patient/dfbab-a2917a"
+                },
+                "valueQuantity": {
+                    "value": 12
+                }
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "https://healthcare.googleapis.com/v1/projects/repo-mcr-dev-staging-343/locations/us-east1/datasets/ds-col-data-repo-dev-final/fhirStores/fhir-col-data-repo-dev-dummy-qa/fhir/Coverage/dfbab-a2917a-1",
+            "resource": {
+                "id": "dfbab-a2917a-1",
+                "meta": {
+                    "lastUpdated": "2023-03-06T20:51:26.680Z",
+                    "tag": [
+                        {
+                            "code": "SUBSETTED",
+                            "system": "http://hl7.org/fhir/v3/ObservationValue"
+                        }
+                    ],
+                    "versionId": "MTY3ODEzNTg4NjY3NzYwNjAwMA"
+                },
+                "network": "EPS SANITAS CENTRO MEDICO KENNEDY",
+                "resourceType": "Coverage"
+            },
+            "search": {
+                "mode": "match"
+            }
+        },
+        {
+            "fullUrl": "Location/d62d9d82-3f2b-44db-b807-04159be709fb",
+            "resource": {
+                "description": "Sede Programa",
+                "id": "d62d9d82-3f2b-44db-b807-04159be709fb",
+                "name": "UPI Norte",
+                "resourceType": "Location",
+                "status": "active",
+                "type": [
+                    {
+                        "coding": [
+                            {
+                                "code": "Sede Programa",
+                                "display": "UPI Norte",
+                                "system": "Itaka"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "Location/35c367f9-bb1d-4403-8254-8ef2b216ad2d",
+            "resource": {
+                "address": {
+                    "city": "11001 BOGOTA D.C.",
+                    "country": "CO COLOMBIA",
+                    "state": "11 DISTRITO CAPITAL",
+                    "text": "CR 45 100 - 74",
+                    "use": "work"
+                },
+                "alias": [
+                    "EPS SANITAS CENTRO MEDICO ESPECIALISTAS AUTOPISTA "
+                ],
+                "id": "35c367f9-bb1d-4403-8254-8ef2b216ad2d",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "IDENTIFIER_SI"
+                                }
+                            ]
+                        },
+                        "value": "35c367f9-bb1d-4403-8254-8ef2b216ad2d"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SOURCE"
+                                }
+                            ]
+                        },
+                        "value": "MDM"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "TIPO_IDENTIFICACION"
+                                }
+                            ]
+                        },
+                        "value": "None"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "NUMERO_IDENTIFICACION"
+                                }
+                            ]
+                        },
+                        "value": "800251440"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SUCURSAL"
+                                }
+                            ]
+                        },
+                        "value": "163405.000000000"
+                    }
+                ],
+                "meta": {
+                    "lastUpdated": "2022-12-13T21:53:58.380Z",
+                    "versionId": "MTY3MDk2ODQzODM4Mzg3MzAwMA"
+                },
+                "name": "EPS SANITAS CENTRO MEDICO ESPECIALISTAS AUTOPISTA NORTE",
+                "partOf": {
+                    "reference": "Location/d62d9d82-3f2b-44db-b807-04159be709fb"
+                },
+                "resourceType": "Location",
+                "telecom": [
+                    {
+                        "rank": 1,
+                        "system": "phone",
+                        "value": "7428383"
+                    },
+                    {
+                        "rank": 1,
+                        "system": "email",
+                        "value": "MNEMPEQUE@EPSSANITAS.CO"
+                    }
+                ]
+            }
+        }
+    ],
+    "resourceType": "Bundle"
+}

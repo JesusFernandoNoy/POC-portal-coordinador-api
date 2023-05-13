@@ -1,6 +1,6 @@
 package com.keralty.totalcare360.portal.coordinador.controllers;
 
-import com.keralty.totalcare360.portal.coordinador.models.entities.Patient;
+import com.keralty.totalcare360.portal.coordinador.models.entities.PatientTotalCare;
 import com.keralty.totalcare360.portal.coordinador.services.IPatientService;
 
 import javax.inject.Inject;
@@ -17,18 +17,18 @@ public class PatientController {
     IPatientService patientService;
 
     @GET
-    public List<Patient> allPatients() {
+    public List<PatientTotalCare> allPatients() {
         return patientService.findAll();
     }
 
     @GET
     @Path("/id/{patientId}")
-    public Patient getPatientById(@PathParam("patientId") Long patientId) {
-        Optional<Patient> objPatient = patientService.findByPatientId(patientId);
+    public PatientTotalCare getPatientById(@PathParam("patientId") Long patientId) {
+        Optional<PatientTotalCare> objPatient = patientService.findByPatientId(patientId);
 
         if (objPatient.isPresent()){
-            Patient patient = objPatient.get();
-            return patient;
+            PatientTotalCare patientTotalCare = objPatient.get();
+            return patientTotalCare;
         }else {
             throw new WebApplicationException("Patient with ID " + patientId + " does not exist.", 404);
         }

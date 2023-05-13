@@ -1,14 +1,14 @@
 package com.keralty.totalcare360.portal.coordinador.repository;
 
-import com.keralty.totalcare360.portal.coordinador.models.entities.Patient;
+import com.keralty.totalcare360.portal.coordinador.models.entities.PatientTotalCare;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
-public class PatientRepository implements PanacheRepository<Patient> {
+public class PatientRepository implements PanacheRepository<PatientTotalCare> {
 
-    public Patient findByDocumentNumber(Long documentNumber) {
-        return find("documentNumber = ?1", documentNumber).firstResult();
+    public PatientTotalCare findByDocumentNumber(String documentTypeCode, String documentNumber) {
+        return find("documentType = ?1 and documentNumber = ?2", documentTypeCode,documentNumber).firstResult();
     }
 }

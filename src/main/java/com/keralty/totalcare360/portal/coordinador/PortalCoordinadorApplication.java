@@ -20,7 +20,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
                 version = "1.0.1",
                 contact = @Contact(
                         name = "API Support",
-                        url = "http://exampleurl.com/contact",
+                        url = "http://localhost:8085/",
                         email = "techsupport@example.com"),
                 license = @License(
                         name = "Apache 2.0",

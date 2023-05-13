@@ -11,4 +11,7 @@ public interface IPatientManagementService {
 
     List<PatientManagement> findAllOrderByHemoglobina();
     Optional<PatientManagement> findByPatientId(Long patientId);
+    PatientManagement savePatientManagement(PatientManagement patientManagement);
+
+
 }

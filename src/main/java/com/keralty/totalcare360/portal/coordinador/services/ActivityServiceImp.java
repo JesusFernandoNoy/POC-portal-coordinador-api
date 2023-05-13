@@ -1,7 +1,7 @@
 package com.keralty.totalcare360.portal.coordinador.services;
 
 import com.keralty.totalcare360.portal.coordinador.models.entities.Activity;
-import com.keralty.totalcare360.portal.coordinador.models.entities.Patient;
+import com.keralty.totalcare360.portal.coordinador.models.entities.PatientTotalCare;
 import com.keralty.totalcare360.portal.coordinador.repository.ActivityRepository;
 
 import javax.inject.Inject;
@@ -40,19 +40,19 @@ public class ActivityServiceImp implements IActivityService{
     @Override
     public List<Activity> findByPatientId(Long patientId) {
 
-        Optional<Patient> patientObj = patientService.findByPatientId(patientId);
+        Optional<PatientTotalCare> patientObj = patientService.findByPatientId(patientId);
 
         List<Activity> listActivities = new ArrayList<>();
 
         if (patientObj.isPresent()){
 
-            Patient patient = patientObj.get();
+            PatientTotalCare patientTotalCare = patientObj.get();
             int category = 0;
             String programName = "UPI_Diabetes";
 
-            if(patient.getOlder()){
+            if(patientTotalCare.getOlder()){
                 category = 1;
-            }else if(!patient.getOlder()){
+            }else if(!patientTotalCare.getOlder()){
                 category = 2;
             }
             listActivities = activityRepository.findByActivityCategory(programName,category);
